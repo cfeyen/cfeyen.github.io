@@ -1,0 +1,15 @@
+{
+  "name": "montana-solitaire",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "montana_solitaire_bg.wasm",
+    "montana_solitaire.js",
+    "montana_solitaire.d.ts"
+  ],
+  "main": "montana_solitaire.js",
+  "types": "montana_solitaire.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
