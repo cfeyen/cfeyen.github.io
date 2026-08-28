@@ -1,0 +1,15 @@
+{
+  "name": "cscsca",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "cscsca_bg.wasm",
+    "cscsca.js",
+    "cscsca.d.ts"
+  ],
+  "main": "cscsca.js",
+  "types": "cscsca.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}

@@ -1,0 +1,29 @@
+h1, h2, h3, p, input, textarea, button, body {
+    color: #ddd;
+}
+
+body {
+    background-color:#222;
+    min-height: 100vh;
+}
+
+textarea, input {
+    width: 100%;
+    resize: none;
+    background-color: #181818;
+}
+
+button {
+    width: 100%;
+    text-align: center;
+    background-color: #181818;
+}
+
+textarea {
+    height: 60vh;
+}
+
+.main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
