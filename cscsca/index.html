@@ -23,17 +23,19 @@ DEFINE P+ {b, d, g}
 </textarea>
         <button id="cscsca-apply">Apply</button>
         <br>
+        <div id="cscsca-logs"></div>
         <p id="cscsca-output"></p>
     </div>
 
-<!-- add logs -->
-
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <script type="module">
       import init, { apply_rules } from "./pkg/cscsca.js";
 
       init().then(() => {
         document.getElementById("cscsca-apply").onclick = () => {
+          let logs = document.getElementById("cscsca-logs");
+          logs.innerHTML = "";
+
           let input = document.getElementById("cscsca-input").value;
           let rules = document.getElementById("cscsca-rules").value;
 
