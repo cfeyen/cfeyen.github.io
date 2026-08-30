@@ -1,4 +1,6 @@
 /* @ts-self-types="./cscsca.d.ts" */
+import { log_phones } from 'script.js';
+
 
 /**
  * @param {string} input
@@ -24,7 +26,7 @@ export function apply_rules(input, rules) {
 function __wbg_get_imports() {
     const import0 = {
         __proto__: null,
-        __wbg_log_phones_6ade88e44f454fa4: function(arg0, arg1, arg2, arg3) {
+        __wbg_log_phones_0ec48c3d0c80f556: function(arg0, arg1, arg2, arg3) {
             log_phones(getStringFromWasm0(arg0, arg1), getStringFromWasm0(arg2, arg3));
         },
         __wbg_prompt_50c3bed6f7eeba64: function(arg0, arg1, arg2) {
