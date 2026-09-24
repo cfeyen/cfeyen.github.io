@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>CSCSCA - Charles' Super Cool Sound Change Applier</title>
         <link href="./cscsca-dkb7vebr.svg" , rel="icon" />
         
-    <link rel="stylesheet" crossorigin href="./chunk-03q7y6hc.css"><script type="module" crossorigin src="./chunk-c8azevev.js"></script></head>
+    <link rel="stylesheet" crossorigin href="./chunk-w3anbzsk.css"><script type="module" crossorigin src="./chunk-c8azevev.js"></script></head>
     <body class="h-screen mx-4 bg-zinc-900 text-zinc-200">
-        <img src="./banner-179rn9rw.svg" width="300" class="m-4" />
         <div class="h-full width-[80%]">
+            <img src="./banner-179rn9rw.svg" width="300" class="m-4" />
             <div class="grid grid-cols-3 md:grid-cols-4 grid-rows-1 gap-4">
                 <h3 class="text-3xl">Input</h3>
                 <h3 class="text-3xl col-span-2 md:col-span-3">Rules</h3>
@@ -21,7 +22,7 @@ ku
 </textarea>
                 </div>
                 <div class="col-span-2 md:col-span-3 h-full">
-                    <div id="cscsca-rules" class="h-full w-full border-2 border-zinc-700 rounded-md">
+                    <div id="cscsca-rules" class="h-full w-full border-2 border-zinc-700 rounded-md overflow-hidden">
                         
                     </div>
                 </div>
@@ -29,19 +30,27 @@ ku
             
 
             <div>
-                <div class="h-full my-2">
+                <div class="my-2">
                     <button id="cscsca-apply" class="w-full border-2 border-zinc-700 hover:border-zinc-800 rounded-md bg-zinc-800 hover:bg-zinc-700">Apply</button>
                 </div>
 
-                <div class="h-full">
-                    <div class="flex">
-                        <h5 class="mr-2">Trace Type:</h5>
-                        <select class="border-zinc-700 border-2 rounded-md bg-zinc-800" name="trace" id="cscsca-trace">
-                            <option value="output">Final Only</option>
-                            <option value="input/output" selected>Initial and Final</option>
-                            <option value="diff">Trace Changed Prints Only</option>
-                            <option value="all">Trace All Prints</option>
-                        </select>
+                <div>
+                    <div class="md:flex md:gap-8">
+                        <div class="flex md:gap-2">
+                            <h5>Trace Type:</h5>
+                            <select class="border-zinc-700 border-2 rounded-md bg-zinc-800 px-2" name="trace" id="cscsca-trace">
+                                <option value="output">Final Only</option>
+                                <option value="input/output" selected>Initial and Final</option>
+                                <option value="diff">Trace Changed Prints Only</option>
+                                <option value="all">Trace All Prints</option>
+                            </select>
+                        </div>
+
+                        <div class="flex md:gap-8">
+                            <a href="./help">
+                                <button class="border-2 border-zinc-700 hover:border-zinc-800 rounded-md bg-zinc-800 hover:bg-zinc-700 px-2">Help</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
