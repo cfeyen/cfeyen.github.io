@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Sound Change Applier</title>
-    <link rel="icon" href="icons/cscsca.png">
-    <link rel="stylesheet" href="main.css">
-  </head>
-  <body>
-    <h1>CSCSCA</h1>
-    <div class="main">
-        <input id="cscsca-input" type="text" value="pata takan"/>
-        <br>
-        <textarea id="cscsca-rules">
-DEFINE V {i, e, a, u, o}
-DEFINE N {m, n}
-DEFINE P- {p, t, k}
-DEFINE P+ {b, d, g}
+    <head>
+        <link href="./cscsca-dkb7vebr.svg" , rel="icon" />
+        
+    <link rel="stylesheet" crossorigin href="./chunk-03q7y6hc.css"><script type="module" crossorigin src="./chunk-c8azevev.js"></script></head>
+    <body class="h-screen mx-4 bg-zinc-900 text-zinc-200">
+        <img src="./banner-179rn9rw.svg" width="300" class="m-4" />
+        <div class="h-full width-[80%]">
+            <div class="grid grid-cols-3 md:grid-cols-4 grid-rows-1 gap-4">
+                <h3 class="text-3xl">Input</h3>
+                <h3 class="text-3xl col-span-2 md:col-span-3">Rules</h3>
+            </div>
 
-@P- >> @P+ / @V _ @V
-
-{@V, @N} >> / @V [*] _ #
+            <div class="grid grid-cols-3 md:grid-cols-4 grid-rows-1 min-h-96 h-[50%] gap-4">
+                <div class="h-full">
+                    <textarea id="cscsca-input" class="h-full w-full resize-none border-2 border-zinc-700 rounded-md bg-zinc-800">pata
+takan
+limu
+ku
 </textarea>
-        <button id="cscsca-apply">Apply</button>
-        <br>
-        <div id="cscsca-logs"></div>
-        <p id="cscsca-output"></p>
-    </div>
+                </div>
+                <div class="col-span-2 md:col-span-3 h-full">
+                    <div id="cscsca-rules" class="h-full w-full border-2 border-zinc-700 rounded-md">
+                        
+                    </div>
+                </div>
+            </div>
+            
 
-    <script type="text/javascript" src="script.js"></script>
-    <script type="module">
-      import init, { apply_rules } from "./pkg/cscsca.js";
+            <div>
+                <div class="h-full my-2">
+                    <button id="cscsca-apply" class="w-full border-2 border-zinc-700 hover:border-zinc-800 rounded-md bg-zinc-800 hover:bg-zinc-700">Apply</button>
+                </div>
 
-      init().then(() => {
-        document.getElementById("cscsca-apply").onclick = () => {
-          let logs = document.getElementById("cscsca-logs");
-          logs.innerHTML = "";
+                <div class="h-full">
+                    <div class="flex">
+                        <h5 class="mr-2">Trace Type:</h5>
+                        <select class="border-zinc-700 border-2 rounded-md bg-zinc-800" name="trace" id="cscsca-trace">
+                            <option value="output">Final Only</option>
+                            <option value="input/output" selected>Initial and Final</option>
+                            <option value="diff">Trace Changed Prints Only</option>
+                            <option value="all">Trace All Prints</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-          let input = document.getElementById("cscsca-input").value;
-          let rules = document.getElementById("cscsca-rules").value;
+            <hr class="my-2"/>
 
-          let result = apply_rules(input, rules);
-
-          document.getElementById("cscsca-output").innerText = result;
-        };
-      });
-    </script>
-  </body>
+            <div>
+                <h3 class="text-3xl">Output</h3>
+                <div id="cscsca-output" class="my-2 overflow-x-auto"></div>
+            </div>
+        </div>
+    </body>
+    
+    
 </html>
