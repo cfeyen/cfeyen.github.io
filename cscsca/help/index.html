@@ -5,8 +5,8 @@
         <link href="../cscsca-dkb7vebr.svg" , rel="icon" />
         
         <meta charset="utf-8">
-    <link rel="stylesheet" crossorigin href="../chunk-7ewy35h3.css"><script type="module" crossorigin src="../chunk-pv3jxfza.js"></script></head>
-    <body class="h-screen mx-4 bg-zinc-900 text-zinc-200">
+    <link rel="stylesheet" crossorigin href="../chunk-6dg9ss1w.css"><script type="module" crossorigin src="../chunk-h37edt1a.js"></script></head>
+    <body class="h-screen px-4 bg-zinc-900 text-zinc-200">
         <a href="../">
             <img src="../banner-179rn9rw.svg" width="300" class="m-4" />
         </a>
@@ -46,7 +46,7 @@
             <p>There are also some special characters that represent phones.</p>
             <ul class="list-disc pl-8">
                 <li>
-                    <p><code class="bg-zinc-700 rounded-sm px-1">#</code>: represents a word boundary</p>
+                    <p><code class="bg-zinc-700 rounded-sm px-1">#</code>: represents a word boundary²</p>
                 </li>
                 <li>
                     <p><code class="bg-zinc-700 rounded-sm px-1">*</code>: represents any phone except a word boundary</p>
@@ -55,6 +55,7 @@
             <br/>
             <br/>
             <p>(1) This may not be up to date with the latest unicode version, but should support the vast majority use cases.</p>
+            <p>(2) It is strongly suggested to not use <code class="bg-zinc-700 rounded-sm px-1">#</code> at the start or end of an input as it may be missed by the applier in some circumstances. Instead, use conditions to verify the ends of words.</p>
             <br/>
             <br/>
             <h3 class="text-4xl">Conditions</h2>
@@ -98,7 +99,6 @@
             <div id="cscsca-help-scopes-3" class="h-12 w-144 border-2 border-zinc-700 rounded-md overflow-hidden"></div>
             <p>To limit the number of possible repetitions, a repetition scope may be ended with <code class="bg-zinc-700 rounded-sm px-1">=</code> followed by the minimum number of repetition and optionally followed by a comma and the maximum number of repetitions.</p>
             <div id="cscsca-help-scopes-4" class="h-12 w-144 border-2 border-zinc-700 rounded-md overflow-hidden"></div>
-            <p>Note: repetitions cannot be put in the input or output of a rule.</p>
             <br/>
             <br/>
             <h3 class="text-4xl">Labels</h2>
@@ -110,13 +110,10 @@
             <p>To fix this, scopes (and <code class="bg-zinc-700 rounded-sm px-1">*</code>) can be prefixed with a label that starts with <code class="bg-zinc-700 rounded-sm px-1"><i>$</i></code>.</p>
             <div id="cscsca-help-labels-3" class="h-12 w-128 border-2 border-zinc-700 rounded-md overflow-hidden"></div>
             <br/>
-            <p>Labels cause selections to agree in which subgroup they select, optionals in if their content is required, repetitions in maximum length², and <code class="bg-zinc-700 rounded-sm px-1">*</code> in which phone is required.</p>
+            <p>Labels cause selections to agree in which subgroup they select, optionals in if their content is required, repetitions in the phones that they match, and <code class="bg-zinc-700 rounded-sm px-1">*</code> in which phone is matched.</p>
             <br/>
             <p>Labels can also cause agreement in conditions as well.</p>
             <div id="cscsca-help-labels-4" class="h-12 w-128 border-2 border-zinc-700 rounded-md overflow-hidden"></div>
-            <br/>
-            <br/>
-            <p>(2) This behavior may change in the future.</p>
             <br/>
             <br/>
             <h3 class="text-4xl">Definitions</h2>
